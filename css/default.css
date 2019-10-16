@@ -5889,6 +5889,10 @@ a.close.disabled {
   overflow: hidden;
 }
 
+.carousel-element {
+  overflow: hidden;
+}
+
 .carousel-inner::after {
   display: block;
   clear: both;
