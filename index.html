@@ -11,11 +11,11 @@
     <script src="https://unpkg.com/react-dom@16.10.2/umd/react-dom.production.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="https://unpkg.com/styled-components@4.4.0/dist/styled-components.min.js"></script>
-    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css"/>
-    <script src="js/owl-carousel/owl.carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script src="https://code.jquery.com/pep/0.4.3/pep.min.js"></script>
+    <script defer src="js/owl-carousel/owl.carousel.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script async src="https://code.jquery.com/pep/0.4.3/pep.min.js"></script>
     <style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
 body /shadow-deep/ [touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
 [touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto; }
@@ -27,7 +27,8 @@ body /shadow-deep/ [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action
 [touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
 body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
 </style>
-    <script>
+    <script defer src="./js/main.js"></script>
+    <!--<script defer>
         document.addEventListener("DOMContentLoaded", function () {
             $('.card').each(function(e) {
                 if ($(this).hasClass('card_size_s')) {
@@ -88,12 +89,10 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
                 document.getElementsByClassName("header-menu")[0].classList.toggle("header-menu_active")
             })
         })
-    </script>
+    </script>-->
 </head>
 
 <!-- body -->
-
-
 <body>
 <a target=_blank href="http://ya.ru"></a>
 <div class="video-controls">
