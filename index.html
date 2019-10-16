@@ -11,7 +11,7 @@
     <!--<script src="https://unpkg.com/react-dom@16.10.2/umd/react-dom.production.min.js"></script>-->
     <script src="./js/index.js"></script>
     <!--<script src="https://unpkg.com/styled-components@4.4.0/dist/styled-components.min.js"></script>-->
-    <script defer src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css"/>
     <script defer src="js/owl-carousel/owl.carousel.min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -27,7 +27,54 @@ body /shadow-deep/ [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action
 [touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
 body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
 </style>
-    <script defer src="./js/main.js"></script>
+    <script defer>
+        let widths = '';
+        window.addEventListener('scroll', function() {
+            widths += document.querySelectorAll('body')[0].offsetWidth;
+        });
+
+        $(document).ready(function(){
+            var carousel = $("#carousel");
+            carousel.owlCarousel();
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttonsContainer = document.querySelector(".buttons-wrap");
+            const fridgeInfoContainer = document.querySelector(".card_size_m:nth-child(8) .card-description");
+            setTimeout(function() {
+                const confirmPurchaseButton = document.querySelector(".buttons-wrap .button_yellow");
+                const purchaseListContainer = document.createElement('div');
+                const purchaseListTitle = document.createElement('p');
+                const purchaseList = document.createElement('ol');
+                const purchaseListItemOne = document.createElement('li');
+                const purchaseListItemTwo = document.createElement('li');
+
+                purchaseListContainer.setAttribute('class', 'purchase-list-wrap');
+                purchaseListTitle.setAttribute('class', 'card-description card-description_big description_critical');
+                purchaseListTitle.textContent = 'Список покупок:';
+                purchaseList.setAttribute('class', 'purchase-list');
+                purchaseListItemOne.setAttribute('class', 'purchase-list__item');
+                purchaseListItemOne.textContent = 'Хлеб';
+                purchaseListItemTwo.setAttribute('class', 'purchase-list__item');
+                purchaseListItemTwo.textContent = 'Молоко';
+
+                purchaseListContainer.appendChild(purchaseListTitle);
+                purchaseListContainer.appendChild(purchaseList);
+                purchaseList.appendChild(purchaseListItemOne);
+                purchaseList.appendChild(purchaseListItemTwo);
+
+                confirmPurchaseButton.onclick = () => {
+                    fridgeInfoContainer.replaceWith(purchaseListContainer)
+                    buttonsContainer.style.display = "none";
+                }
+            }, 0)
+
+
+            document.getElementsByClassName("header-menu__switcher")[0].addEventListener("click", function () {
+                document.getElementsByClassName("header-menu")[0].classList.toggle("header-menu_active")
+            })
+        }, !1);
+    </script>
 </head>
 
 <!-- body -->
