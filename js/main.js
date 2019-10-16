@@ -1,32 +1,32 @@
-"use strict";
-$('.card').each(function(e) {
-    if ($(this).hasClass('card_size_s')) {
-        $(this).css({'border-radius': '22px'})
-    } else {
-        $(this).css({'border-radius': '54px'})
-    }
-});
-
-function setEvtListeners() {
-    const elem = document.querySelector('.knob-container');
-
-}
-
-setEvtListeners();
+// "use strict";
+// $('.card').each(function(e) {
+//     if ($(this).hasClass('card_size_s')) {
+//         $(this).css({'border-radius': '22px'})
+//     } else {
+//         $(this).css({'border-radius': '54px'})
+//     }
+// });
+//
+// function setEvtListeners() {
+//     const elem = document.querySelector('.knob-container');
+//
+// }
+//
+// setEvtListeners();
 
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    $('.card').each(function(e) {
-        if ($(this).hasClass('card_size_s')) {
-            $(this).css({'border-radius': '22px'})
-        } else {
-            $(this).css({'border-radius': '23px'})
-        }
-    });
+    // $('.card').each(function(e) {
+    //     if ($(this).hasClass('card_size_s')) {
+    //         $(this).css({'border-radius': '22px'})
+    //     } else {
+    //         $(this).css({'border-radius': '23px'})
+    //     }
+    // });
     var waterContainer = document.querySelector('.card.card_size_s:last-child');
 
-    waterContainer.innerHTML = 
+    waterContainer.innerHTML =
                 '<div class="card-heading">' +
                     '<div class="card-icon-wrap">' +
                         '<img class="card-icon" src="img/kettle.svg">' +
@@ -48,7 +48,6 @@ window.addEventListener('scroll', function() {
 
 $(document).ready(function(){
     var carousel = $("#carousel");
-
     carousel.owlCarousel();
 });
 
