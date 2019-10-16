@@ -1,13 +1,12 @@
 let widths = '';
 window.addEventListener('scroll', function() {
     widths += document.querySelectorAll('body')[0].offsetWidth;
-
 });
 
-// $(document).ready(function(){
-//     var carousel = $("#carousel");
-//     carousel.owlCarousel();
-// });
+$(document).ready(function(){
+    var carousel = $("#carousel");
+    carousel.owlCarousel();
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     const buttonsContainer = document.querySelector(".buttons-wrap");
