@@ -8,7 +8,18 @@
 <!--    <link rel="stylesheet" href="./css/style.css">-->
     <link rel="shortcut icon" href="favicon.png">
     <!-- scripts -->
-<!--    <script src="./js/index.js"></script>-->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const multimediaScript = document.createElement('script');
+            multimediaScript.setAttribute('src','./js/multimedia.js');
+            const buttonsContainer = document.querySelector('.buttons-wrap');
+
+            buttonsContainer.innerHTML = '<button class="button button_yellow" type="button">Да</button>' +
+                '<button class="button">Нет</button>';
+
+//    document.querySelector('.multimedia').appendChild(multimediaScript);
+        });
+    </script>
     <style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
 body /shadow-deep/ [touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
 [touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto; }
