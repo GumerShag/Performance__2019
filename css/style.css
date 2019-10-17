@@ -11,6 +11,21 @@ a {
     text-decoration: none;
     background-color: transparent;
 }
+header {
+    height: 93px;
+    box-sizing: border-box;
+    padding: 0 40px;
+    border-bottom: 1px solid #f0f0f0
+}
+.card {
+    position: relative;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+}
 
 a:hover {
     color: #0056b3;
@@ -1278,12 +1293,7 @@ html {
 .carousel-element {
     overflow: hidden;
 }
-header {
-    height: 93px;
-    box-sizing: border-box;
-    padding: 0 40px;
-    border-bottom: 1px solid #f0f0f0
-}
+
 
 .purchase-list {
     padding: 0 40px;
