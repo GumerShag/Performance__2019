@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="shortcut icon" href="favicon.png">
     <!-- scripts -->
-    <script>
+    <script async>
         window.addEventListener('DOMContentLoaded', () => {
             const multimediaScript = document.createElement('script');
             multimediaScript.setAttribute('src','./js/multimedia.js');
@@ -14,8 +14,6 @@
 
             buttonsContainer.innerHTML = '<button class="button button_yellow" type="button">Да</button>' +
                 '<button class="button">Нет</button>';
-
-//    document.querySelector('.multimedia').appendChild(multimediaScript);
         });
     </script>
     <style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
@@ -29,7 +27,7 @@ body /shadow-deep/ [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action
 [touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
 body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
 </style>
-    <script defer>
+    <script async>
         let widths = '';
         window.addEventListener('scroll', function() {
             widths += document.querySelectorAll('body')[0].offsetWidth;
